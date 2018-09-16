@@ -3,7 +3,7 @@
 This is an exercise web app project to simulate a calculator. It is generated with [Angular CLI](https://github.com/angular/angular-cli).
 
 ## Preview
-The calculator app can be [previewed here](http://gaga-graphics.com/calculator-app/dist/calculator-app/).
+Here is a <a href="http://gaga-graphics.com/calculator-app/dist/calculator-app/" target="blank">preview page</a> of the calculator app.
 
 ## How to use
 
