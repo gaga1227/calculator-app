@@ -31,7 +31,6 @@ export class MathService {
         upperExp: 16
       });
     } catch (ex) {
-      console.warn('[app: MathService]', ex);
       result = MathService.BAD_EXP_STR;
     }
 

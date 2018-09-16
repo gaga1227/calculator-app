@@ -34,7 +34,6 @@ export class KeypadButtonComponent implements OnInit, OnChanges {
    * @returns {void}
    */
   onClick() {
-    console.log('[keypad button]', 'click:', this.key);
     this.keypadClick.emit(this.key);
   }
 }

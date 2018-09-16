@@ -62,8 +62,6 @@ export class EntryManagerService {
    * @returns {void}
    */
   private _handleNumberEntryKey(key: Key) {
-    console.log('[app: EntryManagerService]', '_handleNumberEntryKey:', key);
-
     const isDecimalKey = key === Key.DECIMAL;
     const isSubtractKey = key === Key.SUBTRACT;
 
@@ -99,8 +97,6 @@ export class EntryManagerService {
    * @returns {void}
    */
   private _handleOperationEntryKey(key: Key) {
-    console.log('[app: EntryManagerService]', '_handleOperationEntryKey:', key);
-
     const isSubtractKey = key === Key.SUBTRACT;
 
     // disallow start with an operation entry
@@ -143,8 +139,6 @@ export class EntryManagerService {
    * @returns {void}
    */
   private _handleFunctionEntryKey(key: Key) {
-    console.log('[app: EntryManagerService]', '_handleFunctionEntryKey:', key);
-
     if (key === Key.CALC) {
       // disallow when result is already displayed
       if (this._isDisplayResult) {

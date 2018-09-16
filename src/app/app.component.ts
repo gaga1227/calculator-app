@@ -55,8 +55,6 @@ export class AppComponent {
    * @returns {void}
    */
   onKeypadSelect(key: Key) {
-    console.log('[app]', 'onKeypadSelect:', key);
-
     // use entry manager to handle all user entries, calculate result and update display properties
     this.entryManager.handleEntryKey(key);
     this.isDisplayResult = this.entryManager.isDisplayResult;
@@ -85,8 +83,6 @@ export class AppComponent {
     if (key === null) {
       return false;
     }
-
-    console.log('[app]', 'onDocumentKeyEvents:', keyCode, event.type, shiftKey ? 'shift' : '');
 
     // get event type
     const isKeyDown = event.type === 'keydown';
