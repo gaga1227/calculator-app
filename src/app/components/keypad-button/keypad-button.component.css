@@ -1,0 +1,45 @@
+:host {
+  position: relative;
+}
+
+.app__keypad-group--left :host {
+  background: #404040;
+  flex: 1 1 33.33%;
+  width: 33.33%;
+}
+
+.app__keypad-group--right :host {
+  background: #616161;
+  flex: 1 1 100%;
+  width: 100%;
+}
+
+.app__keypad-btn {
+  background: none;
+  color: #eee;
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.app__keypad-btn:hover {
+  color: #fd9427;
+}
+
+.app__keypad-btn:active,
+.app__keypad-btn--down {
+  color: #fff;
+  background: #fd9427;
+}

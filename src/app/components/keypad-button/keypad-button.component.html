@@ -1,0 +1,5 @@
+<button
+  [id]=keyButtonId
+  class="app__keypad-btn{{isMappedKeyboardKeyDown ? ' app__keypad-btn--down' : ''}}"
+  (click)="onClick()"
+  [innerHTML]=keyButtonDisplayText></button>

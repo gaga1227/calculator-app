@@ -1,0 +1,33 @@
+<!-- calculator app root -->
+<div class="app">
+  <!-- result display -->
+  <app-display-window
+    [displayText]="isDisplayResult ? calcResultDisplay : calcExpressionDisplay"
+    [isDisplayResult]=isDisplayResult></app-display-window>
+
+  <!-- keypad group: left -->
+  <div class="app__keypad-group app__keypad-group--left">
+    <app-keypad-button
+      *ngFor="let numKey of keys.numKeys"
+      [key]=numKey
+      [keyboardKeyDown]="currentKeyboardKeyDown"
+      (keypadClick)="onKeypadSelect($event)"></app-keypad-button>
+    <app-keypad-button
+      [key]=keys.calcKey
+      [keyboardKeyDown]="currentKeyboardKeyDown"
+      (keypadClick)="onKeypadSelect($event)"></app-keypad-button>
+  </div>
+
+  <!-- keypad group: right -->
+  <div class="app__keypad-group app__keypad-group--right">
+    <app-keypad-button
+      [key]=keys.allCancelKey
+      [keyboardKeyDown]="currentKeyboardKeyDown"
+      (keypadClick)="onKeypadSelect($event)"></app-keypad-button>
+    <app-keypad-button
+      *ngFor="let opKey of keys.opKeys"
+      [key]=opKey
+      [keyboardKeyDown]="currentKeyboardKeyDown"
+      (keypadClick)="onKeypadSelect($event)"></app-keypad-button>
+  </div>
+</div>
